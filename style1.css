@@ -1,0 +1,85 @@
+:root{
+  --bg:#8cdfd6;
+  --card:#e6ece4;
+  --accent:#1e3a8a;
+  --muted:#6b7280;
+  --radius:10px;
+  --maxw:900px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width: var(--maxw);
+  margin: 36px auto;
+  padding: 16px;
+}
+
+header{
+  text-align:center;
+  margin-bottom:20px;
+}
+h1{margin:6px 0}
+.subtitle{color:var(--muted); margin-top:0}
+
+form, .confirmation{
+  background:var(--card);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: 0 8px 24px rgba(20,20,50,0.06);
+}
+
+
+.form-row{margin-bottom:14px}
+label{display:block; font-weight:600; margin-bottom:6px}
+input[type=text], input[type=email], input[type=tel], input[type=date], select, textarea {
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #e6e9ef;
+  border-radius:6px;
+  font-size:0.98rem;
+  background:#fff;
+}
+textarea{resize:vertical}
+.req{color:#b91c1c; margin-left:4px}
+
+
+.two-col{display:flex; gap:12px}
+.two-col > div{flex:1}
+
+
+.form-actions{display:flex; gap:10px; justify-content:flex-end; margin-top:10px}
+button{padding:10px 14px; border-radius:8px; border:0; cursor:pointer}
+button#submitBtn{background:var(--accent); color:#fff; font-weight:700}
+button.secondary{background:#eef2ff; color:var(--accent)}
+
+
+.conf-header{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.conf-actions{display:flex; gap:10px; align-items:center}
+.conf-actions button{background:#10b981; color:#fff; padding:8px 10px}
+.conf-actions .back-link{color:var(--accent); text-decoration:none; font-weight:600}
+
+.conf-content{margin-top:18px}
+.conf-row{padding:12px 0; border-bottom:1px dashed #eee}
+.conf-row:last-child{border-bottom:0}
+.conf-row h3{margin:0 0 6px 0; font-size:0.95rem; color:var(--accent)}
+.conf-row p{margin:0; color:#222}
+
+.two-up{display:flex; gap:18px}
+.two-up > div{flex:1}
+
+.foot-note{margin-top:10px; color:var(--muted); font-size:0.95rem; text-align:center}
+
+
+@media (max-width:700px){
+  .two-col, .two-up{flex-direction:column}
+  .form-actions{flex-direction:column; align-items:stretch}
+  .conf-header{flex-direction:column; align-items:flex-start}
+}
